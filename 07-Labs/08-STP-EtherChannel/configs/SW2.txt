@@ -1,0 +1,9 @@
+hostname SW2
+spanning-tree mode rapid-pvst
+interface range G0/1 - 2
+ switchport mode trunk
+ channel-group 1 mode active
+interface G0/3
+ switchport mode trunk
+interface Port-channel1
+ switchport mode trunk

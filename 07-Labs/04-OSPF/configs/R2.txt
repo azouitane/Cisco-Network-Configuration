@@ -1,0 +1,16 @@
+hostname R2
+interface G0/0
+ ip address 10.0.12.2 255.255.255.252
+ ip ospf 10 area 0
+ no shutdown
+interface G0/1
+ ip address 192.168.20.1 255.255.255.0
+ ip ospf 10 area 0
+ no shutdown
+interface G0/2
+ ip address 10.0.23.1 255.255.255.252
+ ip ospf 10 area 0
+ no shutdown
+router ospf 10
+ router-id 2.2.2.2
+ passive-interface G0/1

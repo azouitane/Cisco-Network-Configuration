@@ -1,0 +1,2 @@
+Configure both client NICs to obtain IPv4 settings automatically (DHCP).
+R1 serves LAN-A directly; R2 relays LAN-B requests with ip helper-address 10.0.12.1.

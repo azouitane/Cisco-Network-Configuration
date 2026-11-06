@@ -1,0 +1,8 @@
+hostname SW2
+interface range FastEthernet0/1, FastEthernet0/24
+ switchport mode access
+ spanning-tree portfast
+interface Vlan1
+ ip address 192.168.20.2 255.255.255.0
+ no shutdown
+ip default-gateway 192.168.20.1

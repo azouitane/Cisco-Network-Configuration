@@ -1,0 +1,23 @@
+hostname SW1
+vlan 10
+ name USERS_A
+vlan 20
+ name USERS_B
+vlan 30
+ name SERVERS
+interface FastEthernet0/1
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+interface FastEthernet0/2
+ switchport mode access
+ switchport access vlan 20
+ spanning-tree portfast
+interface FastEthernet0/3
+ switchport mode access
+ switchport access vlan 30
+ spanning-tree portfast
+interface GigabitEthernet0/1
+ description TRUNK_R1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30

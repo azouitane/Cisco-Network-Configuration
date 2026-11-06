@@ -1,0 +1,4 @@
+Guest PC (VLAN 20): 192.168.20.10 /24, gateway 192.168.20.1.
+Web server (VLAN 30): 192.168.30.10 /24, gateway 192.168.30.1.
+Optional user PC (VLAN 10): 192.168.10.10 /24, gateway 192.168.10.1.
+Expected policy: TCP/80 guest-to-server denied; other guest IP traffic permitted by this example ACL.

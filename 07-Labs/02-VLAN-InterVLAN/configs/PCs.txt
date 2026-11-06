@@ -1,0 +1,4 @@
+Packet Tracer Desktop > IP Configuration (configurer manuellement):
+PC10 192.168.10.10 /24, gateway 192.168.10.1
+PC20 192.168.20.10 /24, gateway 192.168.20.1
+PC30 192.168.30.10 /24, gateway 192.168.30.1

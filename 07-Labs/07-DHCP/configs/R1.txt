@@ -1,0 +1,18 @@
+hostname R1
+interface G0/0
+ ip address 192.168.10.1 255.255.255.0
+ no shutdown
+interface G0/1
+ ip address 10.0.12.1 255.255.255.252
+ no shutdown
+ip dhcp excluded-address 192.168.10.1 192.168.10.20
+ip dhcp pool LAN_A
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ dns-server 192.0.2.53
+ip route 192.168.20.0 255.255.255.0 10.0.12.2
+ip dhcp excluded-address 192.168.20.1 192.168.20.20
+ip dhcp pool LAN_B
+ network 192.168.20.0 255.255.255.0
+ default-router 192.168.20.1
+ dns-server 192.0.2.53

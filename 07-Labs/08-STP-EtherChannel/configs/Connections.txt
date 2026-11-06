@@ -1,0 +1,3 @@
+SW1 G0/1-2 to SW2 G0/1-2 (two parallel LACP links).
+SW1 G0/3 to SW3 G0/1; SW2 G0/3 to SW3 G0/2 (redundant triangle).
+Ports shown are examples; verify actual port count and interface naming.

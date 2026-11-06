@@ -1,0 +1,8 @@
+hostname SW3
+spanning-tree mode rapid-pvst
+interface G0/1
+ description vers SW1
+ switchport mode trunk
+interface G0/2
+ description vers SW2
+ switchport mode trunk

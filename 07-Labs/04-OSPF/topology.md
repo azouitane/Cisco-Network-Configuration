@@ -1,0 +1,10 @@
+# Topologie — OSPF area 0
+
+```text
+LAN-A--R1--R2--R3--LAN-C; LAN-B derrière R2; liens et LAN annoncés en area 0.
+```
+
+
+LANs: 192.168.10.0/24 (R1), 192.168.20.0/24 (R2), 192.168.30.0/24 (R3); liens: 10.0.12.0/30 et 10.0.23.0/30.
+
+PC-A: 192.168.10.10/24, GW .1; PC-B: 192.168.20.10/24, GW .1; PC-C: 192.168.30.10/24, GW .1.

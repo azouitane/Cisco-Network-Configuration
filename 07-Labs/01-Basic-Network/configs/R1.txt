@@ -1,0 +1,20 @@
+hostname R1
+no ip domain-lookup
+interface GigabitEthernet0/0
+ description LAN-A vers SW1
+ ip address 192.168.10.1 255.255.255.0
+ no shutdown
+interface GigabitEthernet0/1
+ description WAN vers R2
+ ip address 10.0.0.1 255.255.255.252
+ no shutdown
+ip route 192.168.20.0 255.255.255.0 10.0.0.2
+ip domain-name lab.example
+username netadmin privilege 15 secret <SECRET_UNIQUE>
+ip ssh version 2
+line vty 0 4
+ login local
+ transport input ssh
+! Generer RSA avec une taille supportee et approuvee par le modele.
+! Apres hostname et ip domain-name, generer les cles RSA via la syntaxe supportee.
+! Exemple souvent accepte: crypto key generate rsa modulus 2048
